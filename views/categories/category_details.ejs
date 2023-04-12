@@ -1,0 +1,9 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <h2>Category <%= category.title%></h2>
+    <a href="<%= category.url %>/update"><h5>Edit category</h5></a>
+    <a href="<%= category.url %>/delete"><h5>Delete category</h5></a>
+  </body>
+</html>

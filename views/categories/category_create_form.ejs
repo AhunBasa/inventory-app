@@ -1,0 +1,22 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <h1>Create new category</h1>
+    <div>
+      <form action="" method="post">
+        <label for="title">Enter category: </label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Enter category name"
+        />
+        <button>Submit</button>
+      </form>
+      <% if (errors) { %> <% errors.forEach(error => { %>
+      <h4><%= error.msg %></h4>
+      <% }) %> <% } %>
+    </div>
+  </body>
+</html>

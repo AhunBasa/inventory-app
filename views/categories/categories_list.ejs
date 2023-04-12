@@ -1,0 +1,11 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <h1>Categories list:</h1>
+
+    <% if (categories.length > 0) { %><% categories.forEach(category => { %>
+    <a href="/categories/<%= category._id %>"><h3><%= category.title %></h3></a>
+    <% }) %> <% } %>
+  </body>
+</html>
