@@ -6,7 +6,10 @@
     <h5><%= category._id %></h5>
     <h5>Created at: <%= category.createdAtFormatted %></h5>
     <h5>Updated at: <%= category.updatedAtFormatted %></h5>
-    <a href="<%= category.url %>/update"><h5>Edit category</h5></a>
-    <a href="<%= category.url %>/delete"><h5>Delete category</h5></a>
+    <h3>Do you really want to delete this category?</h3>
+    <form action="" method="post">
+      <input type="hidden" name="category" value="<%= category._id %>" />
+      <button>Delete</button>
+    </form>
   </body>
 </html>

@@ -16,4 +16,11 @@ CategorySchema.virtual('url').get(function () {
   return `/categories/${this._id}`
 })
 
+CategorySchema.virtual('createdAtFormatted').get(function () {
+  return this.createdAt.toLocaleString()
+})
+
+CategorySchema.virtual('updatedAtFormatted').get(function () {
+  return this.updatedAt.toLocaleString()
+})
 module.exports = mongoose.model('Category', CategorySchema)
